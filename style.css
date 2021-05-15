@@ -1,3 +1,17 @@
+@media screen and (max-width: 900px) {
+  
+    .search_bar {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .search_bar {
+        float: right;
+    }
+}
+
 /* Fade-in buttons */
 button {
     border: none;
@@ -18,18 +32,17 @@ button.imgbutton:hover img {
     position: fixed;
     top: 0;
     left: 120px;
-    height: 80px;
     width: calc(100% - 120px - 20px);
+    height: 80px;
 
     border-bottom: solid;
     border-color: #E5E5E5;
 }
 
 .topbar .future_log {
-    position: absolute;
-    top: 10px;
-
-    padding-top: 10px;
+    position: relative;
+    top: 1em;
+    margin-top: 100px;
     margin-left: 10px;
 }
 
@@ -44,31 +57,27 @@ button.imgbutton:hover img {
     font-size: 48px;
 }
 
-.search_bar_outer {
-    float: right;
-
-    width: calc(36px + 16em);
+.search_bar {
     margin-top: 1em;
-
-    height: 1.5em;
 }
 
-.search_bar_outer img {
+.search_bar img {
     display: inline;
+ 
     opacity: 25%;
 
+    height: 36px;
+    line-height: 36px;
+    vertical-align: text-bottom;
+
     /* TODO: unjank */
-    margin-top: 1px;
-    height: 40px;
+    position: relative;
+    top: 6px;
 }
 
-.search_bar {
-    float: right;
-
+.search_bar input{
     /* TODO: hard coded */
-    width: 14.5em;
-    line-height: 36px;
-    padding-left: .5em;
+    font-size: 16pt;
 
     border: solid;
     border-radius: 5px;
@@ -76,16 +85,20 @@ button.imgbutton:hover img {
 }
 
 /* Fade in for search bar */
-.search_bar_outer:hover img {
+.search_bar:hover img {
     opacity: 100%;
     transition: 150ms;
 }
 
-.search_bar_outer:hover .search_bar {
+.search_bar:hover input {
     border-color: rgba(0, 0, 0, .75);
     transition: 150ms;
 }
 
+.search_bar input:focus {
+    border-color: rgba(0, 0, 0, .75);
+    transition: 150ms;
+}
 
 /* Side navigation */
 .sidebar {
