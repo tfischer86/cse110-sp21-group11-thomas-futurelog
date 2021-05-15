@@ -1,0 +1,136 @@
+/* Fade-in buttons */
+button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+button.imgbutton img {
+    filter: opacity(50%);
+}
+
+button.imgbutton:hover img {
+    filter: opacity(100%);
+    transition: 150ms;
+}
+
+/* Top navigation */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 120px;
+    height: 80px;
+    width: calc(100% - 120px - 20px);
+
+    border-bottom: solid;
+    border-color: #E5E5E5;
+}
+
+.topbar .future_log {
+    position: absolute;
+    top: 10px;
+
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.topbar button {
+    display: inline;
+    margin: 0 10px;
+}
+
+.topbar h1 {
+    display: inline;
+    margin-top: 80px;
+    font-size: 48px;
+}
+
+.search_bar_outer {
+    float: right;
+
+    width: calc(36px + 16em);
+    margin-top: 1em;
+
+    height: 1.5em;
+}
+
+.search_bar_outer img {
+    display: inline;
+    opacity: 25%;
+
+    /* TODO: unjank */
+    margin-top: 1px;
+    height: 40px;
+}
+
+.search_bar {
+    float: right;
+
+    /* TODO: hard coded */
+    width: 14.5em;
+    line-height: 36px;
+    padding-left: .5em;
+
+    border: solid;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, .25);
+}
+
+/* Fade in for search bar */
+.search_bar_outer:hover img {
+    opacity: 100%;
+    transition: 150ms;
+}
+
+.search_bar_outer:hover .search_bar {
+    border-color: rgba(0, 0, 0, .75);
+    transition: 150ms;
+}
+
+
+/* Side navigation */
+.sidebar {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 1;
+    padding-top: 20px;
+    background-color: #F7F2EC;
+    text-align: center;
+}
+
+.sidebar button {
+    display: block;
+    color: #818181;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+
+/* Text editor, to be integrated */
+main {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+/* Test code */
+.dropdown-button {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    transition: 1000ms;
+}
+
+.dropdown-button:hover {
+    background-color: tomato;
+    transition: 250ms;
+}
+
+.dropdown-button:active {
+    border: solid;
+    border-color: gray;
+    transition: 250ms;
+}
